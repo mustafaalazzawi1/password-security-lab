@@ -12,7 +12,8 @@ python3 - "$source_archive" <<'PY'
 import hashlib, sys
 from pathlib import Path
 expected = '0b266adcfef8c11eed690187e71494baea539efbd632fe221181063ba09508df'
-assert hashlib.sha256(Path(sys.argv[1]).read_bytes()).hexdigest() == expected, 'Source checksum mismatch'
+if hashlib.sha256(Path(sys.argv[1]).read_bytes()).hexdigest() != expected:
+    raise SystemExit('Source checksum mismatch')
 PY
 tar -xJf "$source_archive" -C "$tool_dir"
 make -C "$tool_dir/john-1.9.0/src" -j2 linux-x86-64

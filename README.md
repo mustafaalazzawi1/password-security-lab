@@ -53,7 +53,7 @@ python3 -m unittest discover -s tests -v
 
 GitHub Actions runs these checks on pushes and pull requests with read-only repository permissions. It also runs the suite with `python -O`: validation remains active when Python assertions are disabled. The workflow checks the saved evidence and verifier; it does not rerun John or test real accounts.
 
-The **22 regression tests** cover valid evidence, missing files, malformed JSON/UTF-8, duplicate identities and recovery rows, altered plaintexts and wordlists, inconsistent summaries, incomplete runs, and unexpected stage paths. Failures produce a nonzero exit code and a specific message. These tests are separate from the **23 assertions recorded during the original experiment**.
+The **24 regression tests** include 22 evidence-verifier tests covering valid evidence, missing files, malformed JSON/UTF-8, duplicate identities and recovery rows, altered plaintexts and wordlists, inconsistent summaries, incomplete runs, and unexpected stage paths. Two setup tests verify that a corrupt tool download is rejected before extraction under normal and optimized Python. These tests use fake download and extraction commands; they do not access the network. Failures produce a nonzero exit code and a specific message. These tests are separate from the **23 assertions recorded during the original experiment**.
 
 ## Read the deliverables
 
