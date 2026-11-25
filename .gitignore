@@ -1,0 +1,6 @@
+tools/
+__pycache__/
+*.py[cod]
+.DS_Store
+# Keep the committed reference run; ignore future local runs.
+evidence/my-*/

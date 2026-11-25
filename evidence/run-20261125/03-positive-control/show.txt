@@ -1,0 +1,10 @@
+$ ./john --show --format=crypt fixtures.sha512crypt
+
+lab_numeric:123456
+lab_dictionary:password
+lab_season:Summer2026!
+lab_context:Orion1998!
+lab_reuse:password
+lab_random:U7hullawvsR511MU7qnNpLy7
+
+6 password hashes cracked, 0 left

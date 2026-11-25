@@ -1,0 +1,13 @@
+0:00:00:00 Starting a new session
+0:00:00:00 Loaded a total of 6 password hashes with 6 different salts
+0:00:00:00 - Hash type: crypt, generic crypt(3) (lengths up to 72)
+0:00:00:00 - Algorithm: ?/64
+0:00:00:00 - Candidate passwords will be buffered and tried in chunks of 96
+0:00:00:00 - Configured to use otherwise idle processor cycles only
+0:00:00:00 Proceeding with wordlist mode
+0:00:00:00 - Wordlist file: wordlist.txt
+0:00:00:00 - No word mangling rules
+0:00:00:00 + Cracked lab_reuse
+0:00:00:00 + Cracked lab_numeric
+0:00:00:00 + Cracked lab_dictionary
+0:00:00:00 Session completed

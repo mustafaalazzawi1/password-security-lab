@@ -1,0 +1,44 @@
+[
+  {
+    "account": "lab_numeric",
+    "category": "Common numeric sequence",
+    "password": "123456",
+    "salt": "979bbd77a2e53151",
+    "hash": "$6$979bbd77a2e53151$hkM2UhvdsqMDlbR/vDA1KbDQay5.X0T6CCBQwJlmzrdDY8CIzibDdhs8VjmNX2A0dJztAZ9m7f8/nS/guykUS0"
+  },
+  {
+    "account": "lab_dictionary",
+    "category": "Common dictionary word",
+    "password": "password",
+    "salt": "1736c3546d76d805",
+    "hash": "$6$1736c3546d76d805$VEViHgUkVz/ABgXSCUsEw93G4iKQRVMgJg.bMX/FcEU0kceC1dlZT0uDCd/uDi7AfB22K/yHgOYu59/wt3EUA."
+  },
+  {
+    "account": "lab_season",
+    "category": "Season/year/symbol pattern",
+    "password": "Summer2026!",
+    "salt": "59ef75761b0ebc23",
+    "hash": "$6$59ef75761b0ebc23$9KNmLSCIPPhN0euISZzhwTS7NBTB19Xvc30mgIAOxYGC/S97d5Uf22EEi4TlAKQUjZEkVc0CDb7v1W2otOfb01"
+  },
+  {
+    "account": "lab_context",
+    "category": "Fictional name/year/symbol pattern",
+    "password": "Orion1998!",
+    "salt": "242084eca57cb53e",
+    "hash": "$6$242084eca57cb53e$59YD13gQ5XYRLraSJfU1.ukOcyPc29nSW4sYnz7PS0Hrlpjbr9IR08K1MXv/IAA.ZFrIzik8uxETygEAisvQL."
+  },
+  {
+    "account": "lab_reuse",
+    "category": "Same password, different salt",
+    "password": "password",
+    "salt": "e51c1667ccd1b541",
+    "hash": "$6$e51c1667ccd1b541$WBVQJ2tphhO90TW.HBnJB1Uqw/lNMR44pjikWETtXmqaAFXDzc4/7X0u3PItVCLQRg3YVjRnYvjGQj5iJzFzq/"
+  },
+  {
+    "account": "lab_random",
+    "category": "Generated 24-character comparison",
+    "password": "U7hullawvsR511MU7qnNpLy7",
+    "salt": "90271354a83ba625",
+    "hash": "$6$90271354a83ba625$Rn/B6zczogcwTJ3lgZ45y7h3KWJKxBbbwoTY4yFhJTNfPHc5Sy47IDhX/1eb.M67ZbhJ9gpJ68s5cAfZlVeQy/"
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "executed_at_utc": "2026-11-25T06:47:26.358289+00:00",
+  "platform": {
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "python": "3.12.14",
+  "john": "John the Ripper password cracker, version 1.9.0",
+  "openssl": "OpenSSL 3.5.9 29 Sep 2026 (Library: OpenSSL 3.5.9 29 Sep 2026)",
+  "hash_scheme": "SHA-512-crypt ($6$), OpenSSL default 5000 rounds; teaching fixture, not a deployment recommendation",
+  "fixture_sha256": "a11f59d25395344f1af95afe6910197cf5586fc44fae9ee0964a0530f24969f5",
+  "stages": [
+    {
+      "stage": "01-baseline",
+      "candidates": 6,
+      "recovered": 3,
+      "total": 6,
+      "accounts": [
+        "lab_dictionary",
+        "lab_numeric",
+        "lab_reuse"
+      ],
+      "wordlist_sha256": "566b792322992c93719561d6f6bb73930c7d316cfee37be5d47116320f39fd93"
+    },
+    {
+      "stage": "02-patterns",
+      "candidates": 10,
+      "recovered": 5,
+      "total": 6,
+      "accounts": [
+        "lab_context",
+        "lab_dictionary",
+        "lab_numeric",
+        "lab_reuse",
+        "lab_season"
+      ],
+      "wordlist_sha256": "a9a577161d6365b9e74f808ae66eb1cf95a91d7765ce22928c6c24746225cadf"
+    },
+    {
+      "stage": "03-positive-control",
+      "candidates": 11,
+      "recovered": 6,
+      "total": 6,
+      "accounts": [
+        "lab_context",
+        "lab_dictionary",
+        "lab_numeric",
+        "lab_random",
+        "lab_reuse",
+        "lab_season"
+      ],
+      "wordlist_sha256": "45a5e61fd8c0622334325f1f6645600f633409776c1980bb0da764a4b0191526"
+    }
+  ],
+  "checks_passed": 23,
+  "checks": [
+    "Six unique fixture salts",
+    "Identical passwords yield different salted hashes",
+    "Random comparison excluded from both attack wordlists",
+    "01-baseline: clean pot before execution",
+    "01-baseline: observed accounts match the declared candidate coverage",
+    "01-baseline: verified plaintext for lab_numeric",
+    "01-baseline: verified plaintext for lab_dictionary",
+    "01-baseline: verified plaintext for lab_reuse",
+    "02-patterns: clean pot before execution",
+    "02-patterns: observed accounts match the declared candidate coverage",
+    "02-patterns: verified plaintext for lab_numeric",
+    "02-patterns: verified plaintext for lab_dictionary",
+    "02-patterns: verified plaintext for lab_season",
+    "02-patterns: verified plaintext for lab_context",
+    "02-patterns: verified plaintext for lab_reuse",
+    "03-positive-control: clean pot before execution",
+    "03-positive-control: observed accounts match the declared candidate coverage",
+    "03-positive-control: verified plaintext for lab_numeric",
+    "03-positive-control: verified plaintext for lab_dictionary",
+    "03-positive-control: verified plaintext for lab_season",
+    "03-positive-control: verified plaintext for lab_context",
+    "03-positive-control: verified plaintext for lab_reuse",
+    "03-positive-control: verified plaintext for lab_random"
+  ],
+  "limitations": [
+    "Constructed six-account fixture, not a representative sample.",
+    "Wordlists intentionally contain selected fixture passwords.",
+    "Positive control deliberately includes the random plaintext.",
+    "No rate comparison, brute-force estimate, real-account test, physical intrusion, or defense efficacy test."
+  ]
+}

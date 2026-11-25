@@ -1,0 +1,15 @@
+$ ./john --format=crypt --wordlist=wordlist.txt fixtures.sha512crypt
+
+STDOUT
+Loaded 6 password hashes with 6 different salts (crypt, generic crypt(3) [?/64])
+Orion1998!       (lab_context)
+password         (lab_reuse)
+123456           (lab_numeric)
+password         (lab_dictionary)
+Summer2026!      (lab_season)
+
+STDERR
+Press 'q' or Ctrl-C to abort, almost any other key for status
+5g 0:00:00:00 100% 31.25g/s 62.50p/s 375.0c/s 375.0C/s password..Orion2026!
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed

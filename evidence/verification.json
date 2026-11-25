@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "stages_checked": 3,
+  "input_hashes_equal_across_stages": true,
+  "raw_show_matches_summary_and_wordlist_coverage": true,
+  "fixture_assertions_passed": 23
+}

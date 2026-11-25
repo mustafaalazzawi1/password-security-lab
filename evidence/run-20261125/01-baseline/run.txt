@@ -1,0 +1,13 @@
+$ ./john --format=crypt --wordlist=wordlist.txt fixtures.sha512crypt
+
+STDOUT
+Loaded 6 password hashes with 6 different salts (crypt, generic crypt(3) [?/64])
+password         (lab_reuse)
+123456           (lab_numeric)
+password         (lab_dictionary)
+
+STDERR
+Press 'q' or Ctrl-C to abort, almost any other key for status
+3g 0:00:00:00 100% 33.33g/s 66.66p/s 400.0c/s 400.0C/s password..admin
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed

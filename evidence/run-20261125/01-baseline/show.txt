@@ -1,0 +1,7 @@
+$ ./john --show --format=crypt fixtures.sha512crypt
+
+lab_numeric:123456
+lab_dictionary:password
+lab_reuse:password
+
+3 password hashes cracked, 3 left
