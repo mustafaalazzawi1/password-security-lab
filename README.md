@@ -1,5 +1,7 @@
 # Password Exposure & Defense
 
+[![Verify evidence and tests](https://github.com/mustafaalazzawi1/password-security-lab/actions/workflows/verify.yml/badge.svg)](https://github.com/mustafaalazzawi1/password-security-lab/actions/workflows/verify.yml)
+
 A small, reproducible offline password-auditing lab and independent security report for **Mustafa Al Azzawi**.
 
 [Interactive case study](https://mustafa-al-azzawi-portfolio.mustafaalazzawi.chatgpt.site/security-lab.html) · [PDF report](docs/Password-Security-Report.pdf) · [Arabic interview notes](docs/INTERVIEW-NOTES-AR.md)
@@ -41,6 +43,17 @@ python3 verify_evidence.py evidence/my-new-run
 The output directory must not already exist. Each reproduction generates a new random comparison password; compare recovery counts and checks, not byte-identical hashes. Setup requires internet access; the experiment itself does not use the network.
 
 The supplied evidence under `evidence/run-20261125/` is the actual initial run. `summary.json` records tool versions, timestamps, hashes, and 23 passing fixture/result assertions. Raw `run.txt` and `show.txt` files preserve John output. `fixtures.json`, wordlists, and pot files contain deliberately public demonstration passwords. Never use them as real credentials.
+
+## Automated verification
+
+```bash
+python3 verify_evidence.py evidence/run-20261125
+python3 -m unittest discover -s tests -v
+```
+
+GitHub Actions runs these checks on pushes and pull requests with read-only repository permissions. It also runs the suite with `python -O`: validation remains active when Python assertions are disabled. The workflow checks the saved evidence and verifier; it does not rerun John or test real accounts.
+
+The **22 regression tests** cover valid evidence, missing files, malformed JSON/UTF-8, duplicate identities and recovery rows, altered plaintexts and wordlists, inconsistent summaries, incomplete runs, and unexpected stage paths. Failures produce a nonzero exit code and a specific message. These tests are separate from the **23 assertions recorded during the original experiment**.
 
 ## Read the deliverables
 

@@ -15,3 +15,7 @@ Verified on 25 November 2026 in Linux x86_64.
 The interactive web page displays saved evidence and performs a local educational quiz. It does not run John, accept user passwords, contact a login service, or save quiz scores. macOS execution of the lab and Safari were not tested.
 
 Fresh setup/run timestamp (UTC): 2026-11-25T07:03:14.108849+00:00
+
+## Evidence-verifier maintenance — 25 November 2026
+
+Added a callable validator with explicit errors and a CLI, 22 independent regression cases, and read-only GitHub Actions. The suite passes in normal and optimized Python. Original experiment inputs, outputs, report results, and the 23 recorded assertions remain unchanged. The new tests validate the evidence pipeline, not password security in a real deployment.
